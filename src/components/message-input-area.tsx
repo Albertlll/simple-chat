@@ -21,8 +21,9 @@ export function MessageInput(props: {setMessagesData : Function}) {
       return
     }
 
-    props.setMessagesData((prev : Array<messageDataProps>) => [...prev, {position : 'right', message : 'поклоняйся алану.'}])
+
     props.setMessagesData((prev : Array<messageDataProps>) => [...prev, {position : 'left', message : message}])
+    setTimeout(() => {props.setMessagesData((prev : Array<messageDataProps>) => [...prev, {position : 'right', message : 'поклоняйся алану.'}])}, 300)
 }
 
   return (
