@@ -38,17 +38,17 @@ export function MessageInput(props: {setMessagesData : Function}) {
       className="relative overflow-hidden rounded-lg border bg-background focus-within:ring-1 focus-within:ring-ring"
     >
       <Label htmlFor="message" className="sr-only">
-        Message
+        Сообщение
       </Label>
       <Textarea
         id="message"
-        placeholder="Type your message here..."
+        placeholder="Напишите сдесь свое сообщение"
         className="min-h-12 resize-none shadow-none !bg-transparent !outline-none !border-transparent"
         onChange={(e) => setMessage(e.target.value)}
       />
       <div className="flex items-center p-3 pt-0">
         <Button type="submit" size="sm" className="ml-auto gap-1.5" onClick={() => {handleMessageSend()}}>
-          Send Message
+          Отправить сообщение
           <CornerDownLeft className="size-3.5" />
         </Button>
       </div>

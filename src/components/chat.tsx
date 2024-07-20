@@ -2,7 +2,7 @@ import Message from "./message";
 import { MessageInput } from "./message-input-area";
 import { useEffect, useRef, useState } from "react";
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { motion, AnimatePresence } from "framer-motion";
+import {AnimatePresence } from "framer-motion";
 export function Chat() {
     const [messagesData, setMessagesData] = useState<Array<{message : string, position : 'left' | 'right'}>>([]);
 
@@ -15,7 +15,7 @@ export function Chat() {
 
 
     return (
-        <div className="relative flex flex-col justify-between p-8 h-full w-full border rounded-md border-input bg-background">
+        <div className="relative flex flex-col justify-between p-8 h-full w-full border rounded-md border-input bg-background mob:p-2 mob:border-transparent">
 
             <ScrollArea className="relative w-full h-full p-3">
                 {messagesData.map((messageData, index) => (

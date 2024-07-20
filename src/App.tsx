@@ -15,7 +15,7 @@ function App() {
         <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <ModeToggle/>
 
-        <div className='flex w-full h-full justify-center'>
+        <div className='flex w-full h-full justify-center p-8 mob:p-2'>
         <Chat/>
         </div>
         </ThemeProvider>

@@ -8,11 +8,7 @@ function Message(props : {messageData : messageDataProps}) {
         <div className={props.messageData.position == "left" ?
         "w-full flex justify-end" :
         "w-full flex justify-start gap-3"
-        }>
-
-
-        
-                    
+        }>   
 
 
         {
