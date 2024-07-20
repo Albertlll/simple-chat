@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea"
 
 import { useState } from "react"
 import { messageDataProps } from "./props"
-
+import data from '../assets/data.json'
 
 
 
@@ -21,9 +21,16 @@ export function MessageInput(props: {setMessagesData : Function}) {
       return
     }
 
+    
 
+    var num = Math.floor(Math.random() * data.length)
+    
     props.setMessagesData((prev : Array<messageDataProps>) => [...prev, {position : 'left', message : message}])
-    setTimeout(() => {props.setMessagesData((prev : Array<messageDataProps>) => [...prev, {position : 'right', message : 'поклоняйся алану.'}])}, 300)
+    setTimeout(() => {
+
+        props.setMessagesData((prev : Array<messageDataProps>) => [...prev, {position : 'right', message : data[num]}])
+    
+    }, 300)
 }
 
   return (
